@@ -1,0 +1,152 @@
+[
+  {
+    "question": "Who made the first move in the relationship?",
+    "options": ["him", "her"]
+  },
+  {
+    "question": "Who footed the bill on your first date?",
+    "options": ["him", "her"]
+  },
+  { "question": "Who said “I love you” first?", "options": ["him", "her"] },
+  { "question": "Who got down on one knee?", "options": ["him", "her"] },
+  { "question": "Who’s the more romantic one?", "options": ["him", "her"] },
+  { "question": "Who’s the more flirtatious one?", "options": ["him", "her"] },
+  { "question": "Who is better at planning dates?", "options": ["him", "her"] },
+  {
+    "question": "Who wears the pants in your relationship?",
+    "options": ["him", "her"]
+  },
+  { "question": "Who’s better at driving?", "options": ["him", "her"] },
+  {
+    "question": "Who’s better at following directions?",
+    "options": ["him", "her"]
+  },
+  {
+    "question": "Who could talk their way out of a speeding ticket?",
+    "options": ["him", "her"]
+  },
+  {
+    "question": "Who’s in control of the music when you’re on the road?",
+    "options": ["him", "her"]
+  },
+  {
+    "question": "Who’s more skilled in the kitchen?",
+    "options": ["him", "her"]
+  },
+  {
+    "question": "Who’s more likely to order a takeaway?",
+    "options": ["him", "her"]
+  },
+  {
+    "question": "Who is more picky when it comes to food?",
+    "options": ["him", "her"]
+  },
+  { "question": "Who goes grocery shopping more?", "options": ["him", "her"] },
+  {
+    "question": "When you go out for a meal, who’s the more generous tipper?",
+    "options": ["him", "her"]
+  },
+  { "question": "Who hogs the blankets more?", "options": ["him", "her"] },
+  { "question": "Who snores the loudest?", "options": ["him", "her"] },
+  {
+    "question": "Who’s more likely to talk in their sleep?",
+    "options": ["him", "her"]
+  },
+  { "question": "Who’s the earlier riser?", "options": ["him", "her"] },
+  {
+    "question": "Who’s more likely to hit the snooze button on the alarm multiple times?",
+    "options": ["him", "her"]
+  },
+  { "question": "Who stays up the latest?", "options": ["him", "her"] },
+  {
+    "question": "Who’s better at singing (in the shower or in public)?",
+    "options": ["him", "her"]
+  },
+  { "question": "Who would win a dance-off?", "options": ["him", "her"] },
+  {
+    "question": "Who spends more time on their phone/tablet/laptop?",
+    "options": ["him", "her"]
+  },
+  {
+    "question": "Who’s more likely to start a fight?",
+    "options": ["him", "her"]
+  },
+  {
+    "question": "Who’s more likely to finish a fight?",
+    "options": ["him", "her"]
+  },
+  {
+    "question": "Who’s more likely to overspend on a pointless item?",
+    "options": ["him", "her"]
+  },
+  {
+    "question": "Who’s more likely to save all their money?",
+    "options": ["him", "her"]
+  },
+  { "question": "Who’s the clumsier one?", "options": ["him", "her"] },
+  { "question": "Who’s the chattier one?", "options": ["him", "her"] },
+  { "question": "Who’s the funnier one?", "options": ["him", "her"] },
+  { "question": "Who’s the cleaner one?", "options": ["him", "her"] },
+  { "question": "Who’s the more dramatic one?", "options": ["him", "her"] },
+  { "question": "Who’s the more stubborn one?", "options": ["him", "her"] },
+  { "question": "Who’s the more organized one?", "options": ["him", "her"] },
+  { "question": "Who’s the sportier one?", "options": ["him", "her"] },
+  { "question": "Who’s more of a thrill-seeker?", "options": ["him", "her"] },
+  { "question": "Who’s the more adventurous one?", "options": ["him", "her"] },
+  {
+    "question": "Who’s more likely to do something on a dare?",
+    "options": ["him", "her"]
+  },
+  {
+    "question": "Who’s more likely to keep a secret?",
+    "options": ["him", "her"]
+  },
+  {
+    "question": "Who would last the longest on a deserted island?",
+    "options": ["him", "her"]
+  },
+  { "question": "Who’s more of a part animal?", "options": ["him", "her"] },
+  { "question": "Who’s the handier one?", "options": ["him", "her"] },
+  {
+    "question": "Who could build an IKEA unit fastest?",
+    "options": ["him", "her"]
+  },
+  {
+    "question": "Who’s more likely to shed a tear at the cinema?",
+    "options": ["him", "her"]
+  },
+  {
+    "question": "Who’s more scared of creepy crawlies?",
+    "options": ["him", "her"]
+  },
+  {
+    "question": "Who’s more likely to arrive late to an important appointment/meeting?",
+    "options": ["him", "her"]
+  },
+  {
+    "question": "Who needs more TLC when they’re ill?",
+    "options": ["him", "her"]
+  },
+  { "question": "Who’s better at giving presents?", "options": ["him", "her"] },
+  { "question": "Who has more clothes?", "options": ["him", "her"] },
+  { "question": "Who has more shoes?", "options": ["him", "her"] },
+  { "question": "Who is more stylish?", "options": ["him", "her"] },
+  {
+    "question": "Who is more likely to lose something important?",
+    "options": ["him", "her"]
+  },
+  { "question": "Who swears more?", "options": ["him", "her"] },
+  { "question": "Who has worse handwriting?", "options": ["him", "her"] },
+  {
+    "question": "Who takes care of the dirty dishes/laundry?",
+    "options": ["him", "her"]
+  },
+  {
+    "question": "Who prefers staying home to going out?",
+    "options": ["him", "her"]
+  },
+  {
+    "question": "Who’s more likely to have a hangover after the wedding?",
+    "options": ["him", "her"]
+  }
+]
