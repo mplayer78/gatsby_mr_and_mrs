@@ -1,7 +1,10 @@
-import React, { useState } from "react"
+import React, { useState, useEffect } from "react"
 
 const NumberOfQuestions = props => {
   const [noOfQuestions, setNoOfQuestions] = useState(10)
+  useEffect(() => {
+    props.setNoOfQuestions(noOfQuestions)
+  }, [noOfQuestions])
 
   const handleChange = e => setNoOfQuestions(e.target.value)
 
