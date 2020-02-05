@@ -35,20 +35,6 @@ const NewGamePage = () => {
   const handleGo = () => {
     setSetupVisible(!setupVisible)
     setQuestions(shuffleAndSelect(noOfQuestions, questionCount))
-    // shuffle all the question ID's
-    // let m = questionCount.length,
-    //   t,
-    //   i
-    // while (m) {
-    //   i = Math.floor(Math.random() * m--)
-    //   t = questionCount[m]
-    //   questionCount[m] = questionCount[i]
-    //   questionCount[i] = t
-    // }
-    // // select the first xth no of questions to a new array & save to state
-    // let filteredQuestions = questionCount.filter((v, i) => i < noOfQuestions)
-    // // remember this doesn't fire until; the form is posted.
-    // setQuestions(filteredQuestions)
   }
 
   // todo create a useReducer & useContext combo
