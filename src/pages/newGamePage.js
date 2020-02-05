@@ -3,11 +3,9 @@ import { Link, useStaticQuery, graphql } from "gatsby"
 import styled from "styled-components"
 
 import Layout from "../components/layout"
-import SEO from "../components/seo"
-import PlayerName from "../components/playerName"
-import NumberOfQuestions from "../components/numberOfQuestions"
 import Question from "../components/question"
 import shuffleAndSelect from "../utils/shuffleAndSelect"
+import Setup from "../components/setup"
 
 const SetupComponent = styled.div`
   display: ${({ visible }) => (visible ? "contents" : "none")};
@@ -38,21 +36,14 @@ const NewGamePage = () => {
   }
 
   // todo create a useReducer & useContext combo
-  console.log("questions", questions)
   return (
     <Layout>
       <SetupComponent visible={setupVisible}>
-        <SEO title="NewGame" />
-        <h1>New Game</h1>
-        <PlayerName player={1} />
-        <PlayerName player={2} />
-        {/* questionCount should be on context */}
-        <NumberOfQuestions
-          questionCount={questionCount.length}
-          handleSubmit={handleGo}
+        <Setup
+          questionCount={[...questionCount]}
+          handleGo={handleGo}
           setNoOfQuestions={setNoOfQuestions}
         />
-        <button onClick={() => handleGo()}>Go!</button>
       </SetupComponent>
       {/* todo game state should be on context */}
       {/* todo current player should be on context with differing themes */}
