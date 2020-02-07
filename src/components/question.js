@@ -1,13 +1,14 @@
-import React from "react"
+import React, { useContext } from "react"
+import GameContext from "../stateHandling/gameContext"
 
-const handleClick = e => {}
-const Question = ({ current: { id, question, options } }) => {
+const Question = () => {
+  const { state, dispatch } = useContext(GameContext)
   return (
     <div>
-      <h2>{question}</h2>
+      <h2>Hey from question</h2>
       <span>
-        {options.map(v => (
-          <button key={v} onClick={e => handleClick(e.target.value)}>
+        {["him", "her"].map(v => (
+          <button key={v} onClick={e => console.log(e.target.value)}>
             {v}
           </button>
         ))}
