@@ -3,18 +3,35 @@ import GameContext from "../stateHandling/gameContext"
 
 const Question = () => {
   const { state, dispatch } = useContext(GameContext)
-  return (
-    <div>
-      <h2>Hey from question</h2>
-      <span>
-        {["him", "her"].map(v => (
-          <button key={v} onClick={e => console.log(e.target.value)}>
-            {v}
-          </button>
-        ))}
-      </span>
-    </div>
-  )
+  const currentQuestion = state.questions[state.questionNo]
+  console.log("state.players", state.players)
+  if (currentQuestion) {
+    return (
+      <div>
+        <h2>
+          Question {state.questionNo} of {state.noOfQuestions}
+        </h2>
+        <h2>
+          Question for :
+          {state.players[state.player].length > 0
+            ? state.players[state.player]
+            : state.player}
+        </h2>
+        <h2>{currentQuestion.question}</h2>
+        <span>
+          {currentQuestion.options.map(v => (
+            <button
+              key={v}
+              onClick={e => dispatch({ type: "setAnswer", answer: v })}
+            >
+              {v}
+            </button>
+          ))}
+        </span>
+      </div>
+    )
+  }
+  return <p>There may be an issue...</p>
 }
 
 export default Question

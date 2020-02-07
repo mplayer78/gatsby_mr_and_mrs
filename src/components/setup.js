@@ -1,4 +1,4 @@
-import React from "react"
+import React, { useContext } from "react"
 
 import SEO from "../components/seo"
 import PlayerName from "../components/playerName"
@@ -6,16 +6,16 @@ import NumberOfQuestions from "../components/numberOfQuestions"
 import GameContext from "../stateHandling/gameContext"
 
 const Setup = props => {
+  const { state, dispatch } = useContext(GameContext)
   return (
     <div>
-      Hey from setup
       <SEO title="NewGame" />
       <h1>New Game</h1>
-      <PlayerName player={1} />
-      <PlayerName player={2} />
+      <PlayerName player={"player1"} />
+      <PlayerName player={"player2"} />
       {/* questionCount should be on context */}
       <NumberOfQuestions />
-      <button onClick={e => console.log("props", props)}>Go!</button>
+      <button onClick={e => dispatch({ type: "startGame" })}>Go!</button>
     </div>
   )
 }

@@ -40,7 +40,6 @@ const NewGamePage = () => {
         </SetupComponent>
         {/* todo current player should be on context with differing themes */}
         <SetupComponent visible={state.gameVisible}>
-          Hello from question component
           <Question />
           {/* <button onClick={() => handleGo()}>Back to Setup</button> */}
         </SetupComponent>

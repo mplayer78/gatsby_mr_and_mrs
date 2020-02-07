@@ -1,6 +1,6 @@
 export const initialState = {
-  player: 1,
-  players: [],
+  player: "player1",
+  players: { player1: "", player2: "" },
   gameOn: false,
   questionNo: 1,
   setupVisible: true,
