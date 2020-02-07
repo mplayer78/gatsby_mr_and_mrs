@@ -8,6 +8,7 @@ import Setup from "../components/setup"
 import GameContext from "../stateHandling/gameContext"
 import { gameReducer } from "../stateHandling/reducer"
 import { initialState } from "../stateHandling/initialState"
+import AnswerSummary from "../components/answerSummary"
 
 const SetupComponent = styled.div`
   display: ${({ visible }) => (visible ? "contents" : "none")};
@@ -35,13 +36,14 @@ const NewGamePage = () => {
     <GameContext.Provider value={{ state, dispatch }}>
       <Layout>
         <SetupComponent visible={state.setupVisible}>
-          Hello from setup component
           <Setup />
         </SetupComponent>
         {/* todo current player should be on context with differing themes */}
         <SetupComponent visible={state.gameVisible}>
           <Question />
-          {/* <button onClick={() => handleGo()}>Back to Setup</button> */}
+        </SetupComponent>
+        <SetupComponent visible={state.summaryVisible}>
+          <AnswerSummary />
         </SetupComponent>
       </Layout>
     </GameContext.Provider>

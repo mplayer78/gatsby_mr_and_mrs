@@ -23,6 +23,9 @@ const PlayerName = props => {
             e.preventDefault()
             setName(e.target.value)
           }}
+          onBlur={e =>
+            dispatch({ type: "setPlayerName", player: props.player, name })
+          }
         />
       </label>
       <button type="submit">Done</button>

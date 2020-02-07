@@ -3,8 +3,7 @@ import GameContext from "../stateHandling/gameContext"
 
 const Question = () => {
   const { state, dispatch } = useContext(GameContext)
-  const currentQuestion = state.questions[state.questionNo]
-  console.log("state.players", state.players)
+  const currentQuestion = state.questions[state.questionNo - 1]
   if (currentQuestion) {
     return (
       <div>
@@ -17,7 +16,7 @@ const Question = () => {
             ? state.players[state.player]
             : state.player}
         </h2>
-        <h2>{currentQuestion.question}</h2>
+        <h2>{currentQuestion.question}</h2>d
         <span>
           {currentQuestion.options.map(v => (
             <button

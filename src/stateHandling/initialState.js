@@ -5,6 +5,7 @@ export const initialState = {
   questionNo: 1,
   setupVisible: true,
   gameVisible: false,
+  summaryVisible: false,
   noOfQuestions: 1,
   allQuestions: [],
   questions: [],
