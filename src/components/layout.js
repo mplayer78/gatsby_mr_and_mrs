@@ -14,8 +14,10 @@ import "./layout.css"
 import GameContext from "../stateHandling/gameContext"
 
 const Layout = ({ children }) => {
-  const { state, dispatch } = useContext(GameContext)
+  console.log("GameContext", GameContext)
+  const context = useContext(GameContext)
 
+  console.log("context", context)
   const data = useStaticQuery(graphql`
     query SiteTitleQuery {
       site {
@@ -38,7 +40,7 @@ const Layout = ({ children }) => {
       >
         <main>{children}</main>
         <footer>
-          <button onClick={() => dispatch({ type: "resetGame" })}>
+          <button onClick={() => context.dispatch({ type: "resetGame" })}>
             Reset Game
           </button>
         </footer>
