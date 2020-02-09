@@ -16,6 +16,7 @@ const SetupComponent = styled.div`
 
 const NewGamePage = () => {
   const [state, dispatch] = useReducer(gameReducer, initialState)
+  const [playing, setPlaying] = useState(false)
   const questionCount = useStaticQuery(graphql`
     query {
       allQuestionsJson {
@@ -34,6 +35,12 @@ const NewGamePage = () => {
 
   return (
     <GameContext.Provider value={{ state, dispatch }}>
+      <audio
+        src="/src/assets/a_nightingale.mp3"
+        preload="auto"
+        autoPlay
+        loop
+      ></audio>
       <Layout>
         <SetupComponent visible={state.setupVisible}>
           <Setup />

@@ -73,5 +73,15 @@ export function gameReducer(state, action) {
         questionNo: state.questionNo - 1,
       }
     }
+    case "resetGame": {
+      return {
+        ...state,
+        gameOn: false,
+        setupVisible: true,
+        gameVisible: false,
+        summaryVisible: false,
+        players: { player1: "", player2: "" },
+      }
+    }
   }
 }

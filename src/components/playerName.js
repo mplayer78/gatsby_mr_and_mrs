@@ -28,7 +28,14 @@ const PlayerName = props => {
           }
         />
       </label>
-      <button type="submit">Done</button>
+      <button
+        onClick={() => {
+          setName("")
+          dispatch({ type: "setPlayerName", player: props.player, name: "" })
+        }}
+      >
+        Clear
+      </button>
     </form>
   )
 }
