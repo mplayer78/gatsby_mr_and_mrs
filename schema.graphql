@@ -1,0 +1,21 @@
+type Game {
+  players: [String!]
+  questions: [Question!]! @relation(name: "GameQuestions")
+}
+
+type Question {
+  questionText: String!
+  options: [Option!]! @relation(name: "QuestionToOptions")
+  over18: Boolean!
+  games: [Game] @relation(name: "GameQuestions")
+}
+
+type Option {
+  optionText: String!
+  questions: [Question] @relation(name: "QuestionToOptions")
+}
+
+type Query {
+  allQuestions: [Question!]!
+  allOptions: [Option!]!
+}

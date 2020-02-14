@@ -13,34 +13,39 @@ import AnswerSummary from "../components/answerSummary"
 const SetupComponent = styled.div`
   display: ${({ visible }) => (visible ? "contents" : "none")};
 `
-
-const NewGamePage = () => {
-  const [state, dispatch] = useReducer(gameReducer, initialState)
-  const [playing, setPlaying] = useState(false)
-  const questionCount = useStaticQuery(graphql`
-    query {
-      allQuestionsJson {
-        nodes {
-          id
-          question
-          options
+export const query = graphql`
+  {
+    game {
+      allQuestions {
+        data {
+          questionText
+          options {
+            data {
+              optionText
+            }
+          }
         }
       }
     }
-  `).allQuestionsJson.nodes
+    allQuestionsJson {
+      nodes {
+        question
+      }
+    }
+  }
+`
+
+const NewGamePage = props => {
+  console.log("data", props)
+  const [state, dispatch] = useReducer(gameReducer, initialState)
+  const [playing, setPlaying] = useState(false)
   // fetch all the questions from source then write them into state
-  useEffect(() => {
-    dispatch({ type: "writeQuestionsToPage", questionCount })
-  }, [questionCount])
+  // useEffect(() => {
+  //   dispatch({ type: "writeQuestionsToPage", questionCount })
+  // }, [questionCount])
 
   return (
     <GameContext.Provider value={{ state, dispatch }}>
-      <audio
-        src="/src/assets/a_nightingale.mp3"
-        preload="auto"
-        autoPlay
-        loop
-      ></audio>
       <Layout>
         <SetupComponent visible={state.setupVisible}>
           <Setup />
